@@ -1,0 +1,4 @@
+{
+  "name": "Pixel Art Generator",
+  "description": "An application that uses a Hugging Face model to generate unique pixel art from text prompts."
+}

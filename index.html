@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              "press-start": ['"Press Start 2P"', "cursive"],
+              sans: ["Roboto", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-in-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- For local development, place your Hugging Face Token here. HARDCODED -->
+    <!-- <script>
+      window.process = {
+        env: {
+          // IMPORTANT: Replace the placeholder below with your real token!
+          HUGGING_FACE_TOKEN: YOUR_HUGGING_FACE_TOKEN_HERE,
+        },
+      };
+    </script> -->
+
+    <!-- Add Babel to transpile TSX files in the browser. -->
+    <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+
+    <!-- FIX: Cleaned up importmap to remove conflicting React v19 entries. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+          "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+          "react/": "https://esm.sh/react@^19.1.0/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Change script type to "text/babel" so it gets transpiled. -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
