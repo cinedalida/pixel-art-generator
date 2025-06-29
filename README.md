@@ -1,7 +1,3 @@
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
 ## Run Locally
 
 **Prerequisites:** Node.js
@@ -12,3 +8,6 @@ This contains everything you need to run your app locally.
    (create an account to generate token)
 3. Run the app:
    `npm run dev`
+
+## Sample
+![image](https://github.com/user-attachments/assets/e002bbce-df1e-4cec-ac17-66a9be29b731)
