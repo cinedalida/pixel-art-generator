@@ -5,7 +5,7 @@
 1. Install dependencies:
    `npm install`
 2. Set the `VITE_HUGGING_FACE_TOKEN` in [.env.local](.env.local) to your HUGGING FACE API key
-   (create an account to generate token)
+   (create an account in [Hugging Face](https://huggingface.co/) then generate your token)
 3. Run the app:
    `npm run dev`
 
